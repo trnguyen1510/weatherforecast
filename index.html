@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="src/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="weather"> 
-<form class="search-form" id="search">
-  <div class="row">
-    <div class="col-6"><input type="search" placeholder="Search for a city" class="form-control shadow" id="search-input"/></div>
-    <div class="col-3"> <input type="submit" value="search" class="form-control btn btn-primary shadow"/></div>
-    <div class="col-3"> <input type="submit" value="Current Location" class="btn btn-success shadow" id='currentLocation'/></div>
-  </div>
-</form>
-        <h1 id='city'>
-          
-        </h1>
-        <ul>
-          <li id='currentDate'>
-            
-          </li>
-          <li id='description'>
-            
-          </li>
-        </ul>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix">
-               <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="cloudy"
-            class="cloud-icon float-left"
-              />
-              <div class="float-left">
+<head>
+  <title>Weather Forecast</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather">
+      <form class="search-form" id="search">
+        <div class="row">
+          <div class="col-6"><input type="search" placeholder="Search for a city" class="form-control shadow"
+              id="search-input" /></div>
+          <div class="col-3"> <input type="submit" value="search" class="form-control btn btn-primary shadow" /></div>
+          <div class="col-3"> <input type="submit" value="Current Location" class="btn btn-success shadow"
+              id='currentLocation' /></div>
+        </div>
+      </form>
+      <h1 id='city'>
+
+      </h1>
+      <ul>
+        <li id='currentDate'>
+
+        </li>
+        <li id='description'>
+
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="cloudy"
+              class="cloud-icon float-left" />
+            <div class="float-left">
               <span class="temperature" id="temperature"></span>
-              <span class="change-temp" ><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
-              </div>
+              <span class="change-temp"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
             </div>
-            </div>
-
-            <div class="col-6">
-              <ul>
-                <li>
-                Precipitation: 1%
-                </li>
-                <li>
-                 Humidity: <span id='humidity'></span>%
-                </li>
-                <li>
-                  Wind: <span id='wind'></span> km/h
-                </li>
-                </ul>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">Temperature</button>
-                    <button type="button" class="btn btn-secondary">Precipitation</button>
-                    <button type="button" class="btn btn-secondary">Wind</button>
-                  </div>
-              </div>
           </div>
-       </div>
+        </div>
+
+        <div class="col-6">
+          <ul>
+            <li>
+              Precipitation: 1%
+            </li>
+            <li>
+              Humidity: <span id='humidity'></span>%
+            </li>
+            <li>
+              Wind: <span id='wind'></span> km/h
+            </li>
+          </ul>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Temperature</button>
+            <button type="button" class="btn btn-secondary">Precipitation</button>
+            <button type="button" class="btn btn-secondary">Wind</button>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="src/index.js"></script>
-  </body>
+  </div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
 </html>
