@@ -1,3 +1,6 @@
+body{
+  background: black;
+}
 h1 {
   color:#00BCCB;
   font-size: 24px;
@@ -19,7 +22,7 @@ li {
 .weather {
   border: 1px solid;
   padding: 15px;
-  margin: 20px auto;
+  margin: 70px auto;
   max-width: 900px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #16222a, #446f85); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
