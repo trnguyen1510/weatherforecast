@@ -1,6 +1,5 @@
 h1 {
-  color: rgb(135, 135, 135);
-  font-family: Arial, Helvetica, sans-serif;
+  color:#00BCCB;
   font-size: 24px;
   font-weight: 100;
   height: 28px;
@@ -10,8 +9,7 @@ h1 {
 }
 
 li {
-  color: rgb(135, 135, 135);
-  font-family: arial, sans-serif;
+  color: rgb(165, 214, 221);
   font-size: 16px;
   font-weight: 100;
   height: 19px;
@@ -22,8 +20,11 @@ li {
   border: 1px solid;
   padding: 15px;
   margin: 20px auto;
-  max-width: 700px;
+  max-width: 900px;
   border-radius: 10px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  font-family: 'Goldman', cursive;
+  color: #00BCCB;
 }
 
 .temperature {
@@ -42,18 +43,36 @@ li {
   top: -34px;
 }
 
+a {color:black;}
+
 .search-form {
   margin-bottom: 20px;
 }
 
-.btn-secondary {
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(5, 1, 240);
+
+.btn-search{
+  border-color: #00BCCB;
+  color: #00BCCB;
+  background-color: inherit; 
+
+}
+.btn-search:hover{
+  color: black;
+  background-color: #00BCCB;
+}
+.btn-currentlocation{
+  border-color: #fbff07;
+  color: #fbff07;
+  background-color: inherit; 
+}
+
+.btn-currentlocation:hover{
+  background-color:#fbff07;
+  color: black;
 }
 
 .weather-temp .active{
-  color: black;
+  color:  #00BCCB;
   cursor: default; 
 
 }
@@ -63,11 +82,13 @@ li {
 }
 
 .weather-forecast {
-  margin-top: 10px;
+  margin-top: 20px;
 }
-
+.forecast-panel {
+  border: 2px solid  #00BCCB;
+}
 .weather-forecast h3{
-  color: rgb(186, 186, 186); 
+  color:  rgb(165, 214, 221); 
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -81,14 +102,16 @@ li {
   margin: 0 auto;
   height: 48px;
   width: 48px;
+  
 }
 
 .weather-forecast-temperature {
   text-align: center;
-  color: rgb(135, 135, 135);
+  color:#00BCCB;
   font-size: 13px;
   font-weight: 400;
   height: auto;
   line-height: 15px;
   white-space: nowrap;
 }
+

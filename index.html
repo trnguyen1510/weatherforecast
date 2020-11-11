@@ -8,6 +8,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="src/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 
   <meta charset="UTF-8" />
 </head>
@@ -19,8 +20,8 @@
         <div class="row">
           <div class="col-6">
             <input type="search" placeholder="Search for a city" class="form-control shadow" id="search-input" /></div>
-          <div class="col-3"> <input type="submit" value="search" class="form-control btn btn-primary shadow" /></div>
-          <div class="col-3"> <input type="submit" value="Current Location" class="btn btn-success shadow"
+          <div class="col-3"> <input type="submit" value="search" class="form-control btn btn-search shadow" /></div>
+          <div class="col-3"> <input type="submit" value="Current Location" class="btn btn-currentlocation shadow"
               id='currentLocation' /></div>
         </div>
       </form>
@@ -60,9 +61,9 @@
             </li>
           </ul>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Temperature</button>
-            <button type="button" class="btn btn-secondary">Precipitation</button>
-            <button type="button" class="btn btn-secondary">Wind</button>
+            <button type="button" class="btn btn-currentlocation">Temperature</button>
+            <button type="button" class="btn btn-currentlocation">Precipitation</button>
+            <button type="button" class="btn btn-currentlocation">Wind</button>
           </div>
         </div>
       </div>
