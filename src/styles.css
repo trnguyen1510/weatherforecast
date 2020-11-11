@@ -51,3 +51,13 @@ li {
   border-radius: 10px;
   background: rgb(5, 1, 240);
 }
+
+.weather-temp .active{
+  color: black;
+  cursor: default; 
+
+}
+
+.weather-temp .active:hover{
+  text-decoration: none; 
+}

@@ -52,11 +52,10 @@ currentDate.innerHTML = formatDate();
 function displayWeather(response) {
   console.log(response.data);
   let iconElement = document.querySelector("#icon-weather");
+  let temperatureElement = document.querySelector("#temperature");
 
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -65,9 +64,12 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  
+  celciusTemp = response.data.main.temp; 
 
+  temperatureElement.innerHTML = Math.round(celciusTemp);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 function search(city) {
   let apiKey = "d80253f7bab7ebfb0d574948c8b564be";
@@ -87,17 +89,18 @@ form.addEventListener("submit", cityInput);
 function convertF(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  celciusLink.classList.remove("active");
+  fahreinheitLink.classList.add("active");
+  let fahrenheiTemp = (celciusTemp * 9) / 5 +32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemp);
 }
 
 function convertC(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  celciusLink.classList.add("active");
+  fahreinheitLink.classList.remove("active"); 
+  temperatureElement.innerHTML = Math.round(celciusTemp);
 }
 function searchLocation(position) {
   let apiKey = "d80253f7bab7ebfb0d574948c8b564be";
@@ -110,13 +113,18 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+
+let celciusTemp = null; 
+
 let fahreinheitLink = document.querySelector("#fahrenheit");
 fahreinheitLink.addEventListener("click", convertF);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", convertC);
 
-search("Ho Chi Minh");
-
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+
+search("Ho Chi Minh");

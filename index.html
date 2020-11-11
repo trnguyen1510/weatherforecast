@@ -17,7 +17,8 @@
     <div class="weather">
       <form class="search-form" id="search">
         <div class="row">
-          <div class="col-6"><input type="search" placeholder="Search for a city" class="form-control shadow"
+          <div class="col-6">
+            <input type="search" placeholder="Search for a city" class="form-control shadow"
               id="search-input" /></div>
           <div class="col-3"> <input type="submit" value="search" class="form-control btn btn-primary shadow" /></div>
           <div class="col-3"> <input type="submit" value="Current Location" class="btn btn-success shadow"
@@ -37,11 +38,11 @@
       </ul>
       <div class="row">
         <div class="col-6">
-          <div class="clearfix">
+          <div class="clearfix weather-temp">
             <img src="" alt="" class="icon-weather float-left" id="icon-weather" />
             <div class="float-left">
               <span class="temperature" id="temperature"></span>
-              <span class="change-temp"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
+              <span class="change-temp"><a href="#" id="celcius" class="active">°C</a> | <a href="#" id="fahrenheit" class="active">°F</a></span>
             </div>
           </div>
         </div>
