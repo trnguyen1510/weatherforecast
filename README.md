@@ -1,4 +1,5 @@
-# weatherforecast
+# Weather Forecast App
+
 Building weather forecast app using API
 
 Demo
